@@ -5,10 +5,10 @@ const MongoClient = require('mongodb').MongoClient,
       visualize = require('./visualize');
 
 const {
-  WEBPACK_ASSET_ANALYZER_DB_HOST: DB_HOST,
-  WEBPACK_ASSET_ANALYZER_DB_USER: DB_USER,
-  WEBPACK_ASSET_ANALYZER_DB_PASSWORD: DB_PASSWORD,
-  WEBPACK_ASSET_ANALYZER_DB_COLLECTION: DB_COLLECTION
+  MONGO_DB_HOST: DB_HOST,
+  MONGO_DB_USER: DB_USER,
+  MONGO_DB_PASSWORD: DB_PASSWORD,
+  MONGO_DB_COLLECTION: DB_COLLECTION
 } = process.env;
 
 const WebpackAssetInfoPlotly = ({ date, time, assets }, options) => {
