@@ -48,27 +48,27 @@ const visualize = (data) => {
   };
 
   plotly.plot(dataToGraph, graphOptions, function (err, msg) {
-      console.log(msg.url);
-      const image_id = msg.url.split('/').pop();
-      const image_format = 'png';
-      plotly.getFigure(PLOTLY_USERNAME, image_id, function (err, figure) {
-        if (err) return console.log(err);
-
-        var imgOpts = {
-          format: image_format,
-          width: 1000,
-          height: 500
-        };
-
-        plotly.getImage(figure, imgOpts, function (error, imageStream) {
-            if (error) return console.log (error);
-
-            const filename = `${image_id}.${image_format}`;
-            var fileStream = fs.createWriteStream(filename);
-            imageStream.pipe(fileStream);
-            console.log('image created: ', filename);
-        });
-      });
+      console.log('Graph of past builds: ', msg.url);
+      // const image_id = msg.url.split('/').pop();
+      // const image_format = 'png';
+      // plotly.getFigure(PLOTLY_USERNAME, image_id, function (err, figure) {
+      //   if (err) return console.log(err);
+      //
+      //   var imgOpts = {
+      //     format: image_format,
+      //     width: 1000,
+      //     height: 500
+      //   };
+      //
+      //   plotly.getImage(figure, imgOpts, function (error, imageStream) {
+      //       if (error) return console.log (error);
+      //
+      //       const filename = `${image_id}.${image_format}`;
+      //       var fileStream = fs.createWriteStream(filename);
+      //       imageStream.pipe(fileStream);
+      //       console.log('image created: ', filename);
+      //   });
+      // });
   });
 };
 
