@@ -11,7 +11,7 @@ const {
   WEBPACK_ASSET_ANALYZER_DB_COLLECTION: DB_COLLECTION
 } = process.env;
 
-const WebpackAssetAnalyzer = ({ date, time, assets }, options) => {
+const WebpackAssetInfoPlotly = ({ date, time, assets }, options) => {
 
   const limit = (options && options.limit) ? options.limit : 10;
 
@@ -35,4 +35,4 @@ const WebpackAssetAnalyzer = ({ date, time, assets }, options) => {
   });
 }
 
-module.exports = WebpackAssetAnalyzer;
+module.exports = WebpackAssetInfoPlotly;

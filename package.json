@@ -1,7 +1,7 @@
 {
   "name": "webpack-asset-info-plotly",
   "version": "1.0.0",
-  "description": "Visualize info from webpack stats after build.",
+  "description": "Visualize info from webpack stats after build, including historic build stats.",
   "main": "index.js",
   "author": "Tim Farley <tim.farley@doortodoororganics.com>",
   "repository": "git@github.com:relayfoods/webpack-asset-info-plotly.git",
